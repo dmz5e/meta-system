@@ -34,12 +34,6 @@ export default {
   fetchAbuTSV(params) {
     return Api().get('api/results/orig_abundance_profile/' + params.id)
   },
-  addJob(params) {
-    return Api().post('/api/jobs/submit_simulation', params)
-  },
-  addJobClassify(params) {
-    return Api().post('/api/jobs/submit_classification', params)
-  },
   getJobResults(params) {
     return Api().get('/api/results/' + params.id + '/' + params.read_type + '/compare')
   },
@@ -52,12 +46,6 @@ export default {
   },
   getJobResultsDummy() {
     return Api().get('/api/results/test')
-  },
-  hideJob(id) {
-    return Api().post('/api/jobs/hide/' + id)
-  },
-  unhideJob(id) {
-    return Api().post('/api/jobs/unhide/' + id)
   },
   fetchMetrics(params) {
     if (params.classifier) {
@@ -76,12 +64,6 @@ export default {
     } else {
       return Api().get('/api/results/' + params.id + '/' + params.read_type + '/inclusion')
     }
-  },
-  cancelJob(id) {
-    return Api().post('/api/jobs/cancel/' + id)
-  },
-  deleteJob(id) {
-    return Api().post('/api/jobs/delete/' + id)
   },
   downloadJob(id, fname) {
     return Api().get('/api/results/download/' + id + '/' + fname)

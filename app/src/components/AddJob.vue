@@ -73,7 +73,7 @@
               type="button"
               class="btn btn-outline-primary"
               :pressed="simulate"
-            > 
+            >
               Simulate + Classify
             </b-button>
             &nbsp;
@@ -216,24 +216,7 @@
         <div v-if="isMultipleFiles || notMultipleFiles">
           <vue-dropzone
             ref="myVueDropzone"
-            id="abu_file"
-            @vdropzone-file-added="vfileAdded"
-            @vdropzone-success="vsuccess"
-            @vdropzone-error="verror"
-            @vdropzone-removed-file="vremoved"
-            @vdropzone-sending="vsending"
-            @vdropzone-queue-complete="vqueueComplete"
-            @vdropzone-total-upload-progress="vprogress"
-            @vdropzone-mounted="vmounted"
-            @vdropzone-drop="vddrop"
-            @vdropzone-drag-start="vdstart"
-            @vdropzone-drag-end="vdend"
-            @vdropzone-drag-enter="vdenter"
-            @vdropzone-drag-over="vdover"
-            @vdropzone-drag-leave="vdleave"
-            @vdropzone-duplicate-file="vdduplicate"
-            :options="dropzoneOption"
-            :duplicateCheck="true"
+            :aria-disabled="true"
           >
           </vue-dropzone>
         </div>
